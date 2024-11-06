@@ -14,7 +14,7 @@ export default function MovieFetcher() {
     // Function to fetch the top movie for the given year
     async function handleFetchMovie() {
 
-        const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&primary_release_year=${year}`;
+        const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=${year}&sort_by=vote_count.desc`;
 const options = {
   method: 'GET',
   headers: {
