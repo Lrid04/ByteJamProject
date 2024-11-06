@@ -1,8 +1,9 @@
 import Image from "next/image";
-
+import NavBar from "./ui/navbar"
 export default function Home() {
   return (
     <main>
+      <NavBar />
       <h1 className="text-3xl font-semibold text-white-900 text-center">Projects Overview</h1>
       <p className="text-lg text-sky-500">This is Projects uses multiples Pages for navigation</p>
       <p className="text-lg text-sky-500"> Uses Next Js a Framework of React Js</p>
@@ -12,3 +13,4 @@ export default function Home() {
     </main>
   )
 }
+
