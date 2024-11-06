@@ -9,7 +9,6 @@ export default function Home() {
       <p className="text-lg text-sky-500"> Makes Uses of an Api to get Information on the most popular Movies of the Year</p>
       <p className="text-lg text-sky-500">Displays all Information to the User</p>
       <p className="text-lg text-sky-500">Keeps Track Time Previously Enter Time </p>
-
     </main>
   )
 }
