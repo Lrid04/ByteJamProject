@@ -15,26 +15,22 @@ export default function MovieFetcher() {
     async function handleFetchMovie() {
 
         const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=${year}&sort_by=vote_count.desc`;
-const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MWE1NTRiNDg1MThmNjI3YmMwNWJlMzExNWI1ZmZlYSIsIm5iZiI6MTczMDkxMDY5Ni44Mjc1MjA0LCJzdWIiOiI2NzJiOTczNTFlOGRjZWM0YTYyYjhlZWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.MmRbvgRt6-8n8GuyoJtlE9eVl3nlZwu04wCW_l2m-mc'
-  }
-};
-fetch(url, options)
-  .then(res => res.json())
-  .then(json => {console.log(json)
-    setMovie(json.results[0])
-    json.results[0]
-  })
-  .catch(err => console.error(err));
+        const options = {
+            method: 'GET',
+            headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MWE1NTRiNDg1MThmNjI3YmMwNWJlMzExNWI1ZmZlYSIsIm5iZiI6MTczMDkxMDY5Ni44Mjc1MjA0LCJzdWIiOiI2NzJiOTczNTFlOGRjZWM0YTYyYjhlZWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.MmRbvgRt6-8n8GuyoJtlE9eVl3nlZwu04wCW_l2m-mc'
+            }   
+        };
+        fetch(url, options)
+        .then(res => res.json())
+        .then(json => {
+            console.log(json)
+            setMovie(json.results[0])
+        })
+        .catch(err => setError(err));
     }
     
-
-
-    
-
     return (
         <div style={{ padding: '20px', maxWidth: '500px', margin: 'auto' }}>
             <h1>Find the Top Movie by Year</h1>
