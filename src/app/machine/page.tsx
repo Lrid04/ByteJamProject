@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react';
+import NavBar from '../ui/navbar';
 
 export default function MovieFetcher() {
     const [year, setYear] = useState('');
@@ -32,7 +33,8 @@ export default function MovieFetcher() {
     }
     
     return (
-        <div style={{ padding: '20px', maxWidth: '500px', margin: 'auto' }}>
+        <main className='bg-[url("/room.png")] bg-cover bg-no-repeat min-h-screen'>
+            <NavBar/>
             <h1>Find the Top Movie by Year</h1>
 
             {/* Input for year */}
@@ -68,6 +70,6 @@ export default function MovieFetcher() {
                     )}
                 </div>
             )}
-        </div>
+        </main>
     );
 }
