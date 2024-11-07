@@ -2,8 +2,6 @@
 import { useState } from 'react';
 import NavBar from '../ui/navbar';
 import Remote from '../ui/remote'; 
-
-
 import TV from '../ui/tv'
 
 export default function MovieFetcher() {
@@ -46,17 +44,20 @@ export default function MovieFetcher() {
             <h1 className="text-xl font-bold text-center">Find the Top Movie by Year</h1>
 
             
-
-            {/* Keypad for entering year */}
-            <Remote setValue= {setValue} remoteValue = {inputValue}/>
-
-            {/* Fetch movie button */}
-            <button 
-                onClick={handleFetchMovie} 
-                className="mt-3 p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-            >
-                Get Top Movie
-            </button>
+            <div className='flex flex-row align-end'>
+                <TV />
+                <div>
+                    <Remote setValue= {setValue} remoteValue = {inputValue}/>
+                    <button 
+                        onClick={handleFetchMovie} 
+                        className="mt-3 p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+                    >
+                    Get Top Movie
+                    </button>
+                </div>
+            </div>
+            
+            
 
             {/* Error message */}
             {error && <p className="text-red-500">{error}</p>}
