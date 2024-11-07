@@ -1,12 +1,12 @@
 'use client';
 import { useState } from 'react';
 import NavBar from '../ui/navbar';
-import PhoneKeypad from '../ui/remote'; 
+import Remote from '../ui/remote'; 
 
 
 
 export default function MovieFetcher() {
-    const [year, setYear] = useState('');
+    const [inputValue, setInputValue] = useState('');
     const [movie, setMovie] = useState<null | {
         title: string;
         release_date: string;
@@ -17,7 +17,8 @@ export default function MovieFetcher() {
 
     // Function to fetch the top movie for the given year
     async function handleFetchMovie() {
-        const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=${year}&sort_by=vote_count.desc`;
+        console.log(inputValue) 
+        const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=${inputValue}&sort_by=vote_count.desc`;
         const options = {
             method: 'GET',
             headers: {
@@ -34,41 +35,42 @@ export default function MovieFetcher() {
         .catch(err => setError(err));
     }
 
-    const handleKeypadInput = (value: string) => {
-        if (value === "<-") {
-            setYear(year.slice(0, -1)); // Backspace functionality
-        } else {
-            setYear(year + value);
-        }
-    };
 
+    function setValue(value:string){
+        setInputValue(value)
+    }
     return (
-        <div style={{ padding: '20px', maxWidth: '500px', margin: 'auto' }}>
+        <div className="p-5 max-w-md mx-auto">
             <NavBar />
-            <h1>Find the Top Movie by Year</h1>
+            <h1 className="text-xl font-bold text-center">Find the Top Movie by Year</h1>
+
+            
 
             {/* Keypad for entering year */}
-            <PhoneKeypad onInput={handleKeypadInput} />
+            <Remote setValue= {setValue} remoteValue = {inputValue}/>
 
             {/* Fetch movie button */}
-            <button onClick={handleFetchMovie} style={{ padding: '10px 20px', cursor: 'pointer' }}>
+            <button 
+                onClick={handleFetchMovie} 
+                className="mt-3 p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+            >
                 Get Top Movie
             </button>
 
             {/* Error message */}
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            {error && <p className="text-red-500">{error}</p>}
 
             {/* Movie details */}
             {movie && (
-                <div style={{ marginTop: '20px' }}>
-                    <h2>{movie.title}</h2>
+                <div className="mt-5">
+                    <h2 className="text-lg font-semibold">{movie.title}</h2>
                     <p><strong>Release Date:</strong> {movie.release_date}</p>
                     <p><strong>Overview:</strong> {movie.overview}</p>
                     {movie.poster_path && (
                         <img
                             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                             alt={movie.title}
-                            style={{ width: '100%', height: 'auto', marginTop: '10px' }}
+                            className="w-full h-auto mt-2"
                         />
                     )}
                 </div>

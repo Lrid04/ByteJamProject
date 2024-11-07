@@ -1,4 +1,4 @@
-/* General styles for the remote feature */
+
 .keypad-container {
     display: flex;
     flex-direction: column;
@@ -17,6 +17,14 @@
     width: 100%; /* Full width */
     text-align: right;
     background-color: #f9f9f9;
+}
+
+/* New container for the keypad */
+.keypad-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space below the keypad */
 }
 
 .keypad-row {
@@ -62,3 +70,33 @@ button.fetch-movie {
     padding: 10px 20px;
     cursor: pointer;
 }
+/* Ensure specificity for keypad and input display styles */
+.movie-fetcher .keypad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width */
+    margin: auto;
+    padding: 20px;
+}
+
+.movie-fetcher .input-display {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%; /* Full width */
+    text-align: right;
+    background-color: #f9f9f9;
+}
+
+/* Additional styles for the keypad */
+.movie-fetcher .keypad-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space below the keypad */
+}
+
+
