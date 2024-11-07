@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+#searchSection {
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+body {
+    background-image: url('steampunk.png');
+    background-size: cover;       /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: fixed; /* Makes the background stay fixed during scrolling */
+    background-position: center;  /* Center the image */
+}
