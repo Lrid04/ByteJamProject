@@ -38,7 +38,7 @@ export default function MovieFetcher() {
             <NavBar/>
             <h1>Find the Top Movie by Year</h1>
 
-            {/* Input for year */}
+            {/* Input for year
             <label htmlFor="yearInput">Enter a Year:</label>
             <input
                 type="number"
@@ -53,8 +53,8 @@ export default function MovieFetcher() {
                 Get Top Movie
             </button>
 
-            {/* Error message */}
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            // {/* Error message */}
+            {/* // {error && <p style={{ color: 'red' }}>{error}</p>} */}
             <TV />
             {/* Movie details */}
             {movie && (
