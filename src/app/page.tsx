@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <NavBar />
-      <p>
+      <div className="text-lg text-center pr-20 pl-20 pt-10 italic"><p>
       It was a dreary cold November night when you got home 
       from work. Tired and freezing as you walked into your house, 
       which was not much warmer than the outside. It was dark 
@@ -12,6 +12,7 @@ export default function Home() {
       before you inevitably had to return to work in the morning. 
       Had to find something fun to do, maybe read a book before 
       you have your dinner. 
+      <br />
       <br />
       You plopped down in your armchair with a sigh, reaching over 
       to fumble with a lamp on the table next to you and twisting 
@@ -21,6 +22,7 @@ export default function Home() {
       could this have come from? You stood up walking closer to 
       examine the object.
       <br />
+      <br />
       It was one of those ‘TVs’ that everybody had started to buy, 
       boxes with screens that could display an image. You thought it 
       was a very impressive concept, but you could never buy one for 
@@ -28,15 +30,19 @@ export default function Home() {
       did this possibly end up in your living room? You certainly didn’t 
       buy it.
       <br />
+      <br />
       On top of the set was a remote, certainly not like the ones 
       you’ve seen before from other’s TV’s.
+      <br />
       <br />
       Why was this here? You lived alone, just you in this house, you 
       certainly didn’t sleep buy a TV! Where did it come from? It’s 
       not like you could complain much, the strange TV was free. At 
       least it was something to do.
       <br />
+      <br />
       Why not try it?
+      <br />
       <br />
       You picked up the remote, a bulky metal clicker with numbered 
       buttons. Cold against your hand, you stare at the TV a weird 
@@ -45,8 +51,9 @@ export default function Home() {
       your armchair, you stared at the remote for a bit, it weighed 
       heavily on your mind. You had to find out what this was.
       <br />
+      <br />
       So holding your breath you pressed the button.
-      </p>
+      </p></div>
     </main>
   );
 }
