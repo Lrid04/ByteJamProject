@@ -40,7 +40,7 @@ export default function MovieFetcher() {
         setInputValue(value)
     }
     return (
-        <div className="p-5 max-w-md mx-auto">
+        <main className="bg-[url('/room.png')] bg-cover bg-no-repeat min-h-screen" >
             <NavBar />
             <h1 className="text-xl font-bold text-center">Find the Top Movie by Year</h1>
 
