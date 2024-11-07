@@ -75,6 +75,6 @@ export default function MovieFetcher() {
                     )}
                 </div>
             )}
-        </div>
+        </main>
     );
 }
