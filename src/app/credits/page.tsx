@@ -25,7 +25,7 @@ export default function Credits() {
         <div className="w-60 border-2 h-fit">
           <h1>Daniel</h1>
           <Image src={"/Daniel.jpeg"} alt="Daniel" className="" width={236} height={100}/>
-          <p>I am greatful for this experiece, and this team</p>
+          <p>"I am greatful for this experiece, and this team"</p>
         </div>
         <div className="w-60 border-2 h-fit">
           <h1>Nixon</h1>
