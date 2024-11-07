@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react';
 import NavBar from '../ui/navbar';
+import TV from '../ui/tv'
 
 export default function MovieFetcher() {
     const [year, setYear] = useState('');
@@ -54,7 +55,7 @@ export default function MovieFetcher() {
 
             {/* Error message */}
             {error && <p style={{ color: 'red' }}>{error}</p>}
-
+            <TV />
             {/* Movie details */}
             {movie && (
                 <div style={{ marginTop: '20px' }}>
