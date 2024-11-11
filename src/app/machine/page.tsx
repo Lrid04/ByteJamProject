@@ -14,10 +14,10 @@ export default function MovieFetcher() {
         poster_path: string;
     }>(null);
     const [error, setError] = useState('');
+    const [timeValue, setTimeValue] = useState('');
 
     // Function to fetch the top movie for the given year
     async function handleFetchMovie() {
-        console.log(inputValue) 
         const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=${inputValue}&sort_by=vote_count.desc`;
         const options = {
             method: 'GET',
@@ -26,10 +26,11 @@ export default function MovieFetcher() {
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MWE1NTRiNDg1MThmNjI3YmMwNWJlMzExNWI1ZmZlYSIsIm5iZiI6MTczMDkxMDY5Ni44Mjc1MjA0LCJzdWIiOiI2NzJiOTczNTFlOGRjZWM0YTYyYjhlZWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.MmRbvgRt6-8n8GuyoJtlE9eVl3nlZwu04wCW_l2m-mc'
             }   
         };
+        setTimeValue(inputValue + "\n" + timeValue)
+        console.log(timeValue)
         fetch(url, options)
         .then(res => res.json())
         .then(json => {
-            console.log(json);
             setMovie(json.results[0]);
         })
         .catch(err => setError(err));
@@ -38,6 +39,7 @@ export default function MovieFetcher() {
 
     function setValue(value:string){
         setInputValue(value)
+        
     }
     return (
         <main className="bg-[url('/room.png')] bg-cover bg-no-repeat min-h-screen" >
@@ -48,7 +50,7 @@ export default function MovieFetcher() {
             <div className='flex flex-row align-end'>
                 <TV />
                 <div>
-                <Frame />
+                <Frame timeInput={timeValue}/>
                     <Remote setValue= {setValue} remoteValue = {inputValue}/>
                     <button 
                         onClick={handleFetchMovie} 

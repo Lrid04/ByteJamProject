@@ -2,7 +2,6 @@
 export default function Remote(props:{setValue:CallableFunction, remoteValue:string }) {
     
     const handleButtonClick = (value: string) => {
-        console.log(props.remoteValue)
         if (value === "<-") {
             props.setValue(props.remoteValue.slice(0, -1)); // Backspace functionality
             return;
