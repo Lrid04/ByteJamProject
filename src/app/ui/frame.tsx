@@ -25,6 +25,5 @@ export default function Frame() {
                 This is a sample text
             </pre>
         </main>
-
     );
 }
