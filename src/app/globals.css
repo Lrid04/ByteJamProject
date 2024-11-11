@@ -22,10 +22,10 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  10%, 100% {
     transform: scale(1);
   }
-  50% {
+  100% {
     transform: scale(1.1);
   }
 }
