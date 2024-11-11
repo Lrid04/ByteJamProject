@@ -3,6 +3,7 @@ import { useState } from 'react';
 import NavBar from '../ui/navbar';
 import Remote from '../ui/remote'; 
 import TV from '../ui/tv'
+import Frame from '../ui/frame'
 import Movie from '../ui/tv'
 
 export default function Machine() {
@@ -49,6 +50,7 @@ export default function Machine() {
             <div className='flex flex-row align-end'>
                 <TV movie={movie} />
                 <div>
+                <Frame />
                     <Remote setValue= {setValue} remoteValue = {inputValue}/>
                     <button 
                         onClick={handleFetchMovie} 
