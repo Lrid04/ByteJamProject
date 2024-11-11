@@ -3,15 +3,18 @@ import { useState } from 'react';
 import NavBar from '../ui/navbar';
 import Remote from '../ui/remote'; 
 import TV from '../ui/tv'
+import Movie from '../ui/tv'
 
-export default function MovieFetcher() {
-    const [inputValue, setInputValue] = useState('');
-    const [movie, setMovie] = useState<null | {
+export default function Machine() {
+    type Movie = {
         title: string;
         release_date: string;
         overview: string;
         poster_path: string;
-    }>(null);
+    }
+
+    const [inputValue, setInputValue] = useState('');
+    const [movie, setMovie] = useState<null | Movie>();
     const [error, setError] = useState('');
 
     // Function to fetch the top movie for the given year
@@ -38,14 +41,13 @@ export default function MovieFetcher() {
     function setValue(value:string){
         setInputValue(value)
     }
+
     return (
         <main className="bg-[url('/room.png')] bg-cover bg-no-repeat min-h-screen" >
             <NavBar />
             <h1 className="text-xl font-bold text-center">Find the Top Movie by Year</h1>
-
-            
             <div className='flex flex-row align-end'>
-                <TV />
+                <TV movie={movie} />
                 <div>
                     <Remote setValue= {setValue} remoteValue = {inputValue}/>
                     <button 
@@ -56,27 +58,8 @@ export default function MovieFetcher() {
                     </button>
                 </div>
             </div>
-            
-            
-
             {/* Error message */}
             {error && <p className="text-red-500">{error}</p>}
-
-            {/* Movie details */}
-            {movie && (
-                <div className="mt-5">
-                    <h2 className="text-lg font-semibold">{movie.title}</h2>
-                    <p><strong>Release Date:</strong> {movie.release_date}</p>
-                    <p><strong>Overview:</strong> {movie.overview}</p>
-                    {movie.poster_path && (
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt={movie.title}
-                            className="w-full h-auto mt-2"
-                        />
-                    )}
-                </div>
-            )}
         </main>
     );
 }
