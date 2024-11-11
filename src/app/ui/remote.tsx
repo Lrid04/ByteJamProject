@@ -48,7 +48,7 @@ export default function Remote(props:{setValue: CallableFunction, remoteValue: s
 
             {/* Small functional "Get Top Movie" button */}
             <button
-                onClick={props.handleFetchMovie(props.remoteValue)}
+                onClick={() =>props.handleFetchMovie(props.remoteValue)}
                 className="mt-3 p-2 bg-green-500 text-white rounded hover:bg-green-700"
             >
                 Get Top Movie
