@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${quicksand.className} bg-cyan-950 text-gray-300`}
+        className={`${quicksand.className} bg-cyan-950 text-gray-100`}
       >
         {children}
       </body> 
