@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <NavBar />
-      <div className="text-5xl text-center m-20 italic">
+      <div className="text-5xl text-center m-20 italic font-bold">
         <p className="m-20">
         Exhausted from work, you collapsed into your armchair and 
         fumbled with a lamp. When you turned back, you jumped 
