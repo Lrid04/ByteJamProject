@@ -50,13 +50,8 @@ export default function Machine() {
                 <TV movie={movie} />
                 <div className='flex flex-col'>
                     <Frame />
-                    <Remote setValue= {setValue} remoteValue = {inputValue}/>
-                    <button 
-                        onClick={handleFetchMovie} 
-                        className="mt-3 p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-                    >
-                    Get Top Movie
-                    </button>
+                    <Remote setValue= {setValue} remoteValue = {inputValue} handleFetchMovie={handleFetchMovie}/>
+                    
                 </div>
             </div>
             {/* Error message */}
