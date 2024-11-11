@@ -49,13 +49,10 @@ export default function Machine() {
         <main className="bg-[url('/room.png')] bg-cover bg-no-repeat min-h-screen" >
             <NavBar />
             <h1 className="text-xl font-bold text-center">Find the Top Movie by Year</h1>
-            <div className='flex flex-row items-end space-y-2'>
+            <div className='flex items-end'>
                 <TV movie={movie} />
-                <div className='flex flex-col mb-[20%] mt-[20%] self-start mr-[20%]'>
-                    <Frame timeInput={timeValue}/>
-                    <Remote setValue= {setValue} remoteValue = {inputValue} handleFetchMovie={handleFetchMovie}/>
-                    
-                </div>
+                <Remote setValue= {setValue} remoteValue = {inputValue} handleFetchMovie={handleFetchMovie}/>
+                <Frame timeInput={timeValue}/>
             </div>
             {/* Error message */}
             {error && <p className="text-red-500">{error}</p>}

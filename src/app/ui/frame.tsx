@@ -1,22 +1,11 @@
-export default function Frame(props:{timeInput:string}) {
+export default function Frame(props:{timeInput: string}) {
     return (
-        <main className='bg-[url("/frame.png")] bg-contain bg-no-repeat h-80 h-[50%] pt-[19%] w-[100%]'>
-            <pre className="text-wrap text-right pr-[21%] pl-[19%] mb-[19%] overflow-y-scroll h-[80%]">
-                {/* This is a sample text
-                <br />
-                This is a sample text
-                <br />
-                This is a sample text
-                <br />
-                This is a sample text
-                <br />
-                This is a sample text
-                <br />
-                This is a sample text
-                <br />
-                This is a sample text */}
-                {props.timeInput}
-            </pre>
+        <main className='bg-[url("/frame.png")] bg-contain bg-no-repeat h-screen min-w-[20%] self-start pt-[4%] pb-[7%]'>
+                <p className="pl-[20%]">Years Travels to</p>
+                <pre className="text-wrap overflow-y-auto overflow-hidden pl-[65%] pt-[20%] h-[42%]">
+                  {props.timeInput}
+                </pre>
         </main>
+
     );
 }
