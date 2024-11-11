@@ -4,7 +4,6 @@ import NavBar from '../ui/navbar';
 import Remote from '../ui/remote'; 
 import TV from '../ui/tv'
 import Frame from '../ui/frame'
-import Movie from '../ui/tv'
 
 export default function Machine() {
     type Movie = {
@@ -47,10 +46,10 @@ export default function Machine() {
         <main className="bg-[url('/room.png')] bg-cover bg-no-repeat min-h-screen" >
             <NavBar />
             <h1 className="text-xl font-bold text-center">Find the Top Movie by Year</h1>
-            <div className='flex flex-row align-end'>
+            <div className='flex flex-row place-content-end'>
                 <TV movie={movie} />
-                <div>
-                <Frame />
+                <div className='flex flex-col'>
+                    <Frame />
                     <Remote setValue= {setValue} remoteValue = {inputValue}/>
                     <button 
                         onClick={handleFetchMovie} 

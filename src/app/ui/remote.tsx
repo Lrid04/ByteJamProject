@@ -14,7 +14,7 @@ export default function Remote(props:{setValue:CallableFunction, remoteValue:str
     };
 
     return (
-        <div className="flex flex-col items-center  p-5">
+        <div className="bg-[url('/remote.png')] bg-contain bg-no-repeat flex flex-col items-center p-5">
             <h1 className="text-xl font-bold mb-4">Time Travel Remote</h1>
             <p className="mb-4">Use the keypad below:</p>
             
