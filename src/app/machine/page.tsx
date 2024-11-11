@@ -17,6 +17,7 @@ export default function Machine() {
     const [inputValue, setInputValue] = useState('');
     const [movie, setMovie] = useState<null | Movie>();
     const [error, setError] = useState('');
+    const [timeValue, setTimeValue] = useState('');
 
     // Function to fetch the top movie for the given year
     async function handleFetchMovie() {
@@ -28,6 +29,8 @@ export default function Machine() {
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MWE1NTRiNDg1MThmNjI3YmMwNWJlMzExNWI1ZmZlYSIsIm5iZiI6MTczMDkxMDY5Ni44Mjc1MjA0LCJzdWIiOiI2NzJiOTczNTFlOGRjZWM0YTYyYjhlZWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.MmRbvgRt6-8n8GuyoJtlE9eVl3nlZwu04wCW_l2m-mc'
             }   
         };
+        setTimeValue(inputValue + "\n" + timeValue)
+        console.log(timeValue)
         fetch(url, options)
         .then(res => res.json())
         .then(json => {
@@ -39,6 +42,7 @@ export default function Machine() {
 
     function setValue(value:string){
         setInputValue(value)
+        
     }
 
     return (
@@ -48,7 +52,7 @@ export default function Machine() {
             <div className='flex flex-row items-end'>
                 <TV movie={movie} />
                 <div className='flex flex-col'>
-                    <Frame />
+                    <Frame timeInput={timeValue}/>
                     <Remote setValue= {setValue} remoteValue = {inputValue} handleFetchMovie={handleFetchMovie}/>
                     
                 </div>
