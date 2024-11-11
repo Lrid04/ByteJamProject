@@ -19,7 +19,7 @@ export default function Remote(props:{setValue:CallableFunction, remoteValue:str
             <p className="mb-4">Use the keypad below:</p>
             
             {/* Input Display Box with "Enter Year" */}
-            <div className="border border-gray-300 p-3 rounded-md mb-4 bg-gray-100 w-full text-center">
+            <div className="border border-gray-300 p-3 rounded-md mb-4 bg-gray-100 w-full text-center text-gray-900">
                 <span className="text-2xl font-semibold">{props.remoteValue || "Enter Year"}</span>
             </div>
 

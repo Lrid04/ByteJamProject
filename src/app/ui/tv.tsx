@@ -13,8 +13,8 @@ export default function Tv(movie: Movie | any) {
         console.log(movie.movie.poster_path)
         return (
             <main className='bg-[url("/tv.png")] bg-contain bg-no-repeat h-screen grow'>
-                <p className="" >{movie.movie.title}</p>
-                <div className="h-20 w-20">
+                <p className="text-gray-900 pl-[16.5%] pt-[4.5%]" >{movie.movie.title}</p>
+                <div className="h-20 w-20 mt-[10%] ml-[19.6%]">
                     <img 
                     src={`https://image.tmdb.org/t/p/w500${movie.movie.poster_path}`}
                     alt={"Movie Poster"}
