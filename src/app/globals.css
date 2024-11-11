@@ -20,3 +20,40 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes pulse {
+  10%, 100% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s ease-in-out; 
+}
+
+@keyframes border-glow {
+  0% {
+    border-color: #ff007f;
+  }
+  50% {
+    border-color: #00eaff;
+  }
+  100% {
+    border-color: #ff007f;
+  }
+}
+
+.glowing-border {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.glowing-border:hover {
+  animation: border-glow 2s infinite;
+  transform: scale(1.05);
+}
