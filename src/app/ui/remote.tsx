@@ -40,7 +40,7 @@ export default function Remote(props:{setValue: CallableFunction, remoteValue: s
                     <button onClick={() => handleButtonClick('9')} className="flex-1 mx-1 p-3 bg-blue-500 text-white rounded hover:bg-blue-700">9</button>
                 </div>
                 <div className="flex justify-between">
-                <button className="flex-1 mx-1 p-3 bg-blue-500 text-white rounded hover:bg-blue-700"></button>
+                    <button className="flex-1 mx-1 p-3 bg-blue-500 text-white rounded hover:bg-blue-700"></button>
                     <button onClick={() => handleButtonClick('0')} className="flex-1 mx-1 p-3 bg-blue-500 text-white rounded hover:bg-blue-700">0</button>
                     <button onClick={() => handleButtonClick('<-')} className="flex-1 mx-1 p-3 bg-blue-500 text-white rounded hover:bg-blue-700">{'<-'}</button>
                 </div>

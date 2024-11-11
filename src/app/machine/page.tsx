@@ -5,6 +5,7 @@ import Remote from '../ui/remote';
 import TV from '../ui/tv'
 import Frame from '../ui/frame'
 
+
 export default function Machine() {
     type Movie = {
         title: string;
@@ -19,7 +20,6 @@ export default function Machine() {
 
     // Function to fetch the top movie for the given year
     async function handleFetchMovie() {
-        console.log(inputValue) 
         const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=${inputValue}&sort_by=vote_count.desc`;
         const options = {
             method: 'GET',
@@ -31,7 +31,6 @@ export default function Machine() {
         fetch(url, options)
         .then(res => res.json())
         .then(json => {
-            console.log(json);
             setMovie(json.results[0]);
         })
         .catch(err => setError(err));
@@ -46,7 +45,7 @@ export default function Machine() {
         <main className="bg-[url('/room.png')] bg-cover bg-no-repeat min-h-screen" >
             <NavBar />
             <h1 className="text-xl font-bold text-center">Find the Top Movie by Year</h1>
-            <div className='flex flex-row place-content-end'>
+            <div className='flex flex-row items-end'>
                 <TV movie={movie} />
                 <div className='flex flex-col'>
                     <Frame />

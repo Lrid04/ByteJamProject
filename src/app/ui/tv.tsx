@@ -10,15 +10,14 @@ type Movie = {
 
 export default function Tv(movie: Movie | any) {
     if (movie.movie != undefined){
-        console.log(movie.movie.poster_path)
         return (
-            <main className='bg-[url("/tv.png")] bg-contain bg-no-repeat max-h-screen grow max-w-[50%] mt-auto'>
+            <main className='bg-[url("/tv.png")] bg-contain bg-no-repeat h-screen grow'>
                 <p className="" >{movie.movie.title}</p>
-                <div className="h-20 w-20">
+                <div className="max-h-[8.5%] max-w-[6.5%] mt-[15%] ml-[20.9%]">
                     <img
                     src={`https://image.tmdb.org/t/p/w500${movie.movie.poster_path}`}
                     alt={"Movie Poster"}
-                    className="object-scale-down"
+                    className=""
                     />
                 </div>
                 
@@ -29,13 +28,10 @@ export default function Tv(movie: Movie | any) {
         return (
             <main className='bg-[url("/tv.png")] bg-contain bg-no-repeat h-screen grow'>
                 <p className="" ></p>
-                <Image 
-                src={"/#"}
-                alt={"Movie Poster"}
-                width={100}
-                height={100}
-                className=""
-                />
+                <img
+                    alt={""}
+                    className="object-scale-down"
+                    />
             </main>
             );
     }
