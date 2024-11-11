@@ -25,7 +25,7 @@ export default function Credits() {
         <div className="w-60 border-2 h-fit">
           <h1>Daniel</h1>
           <Image src={"/Daniel.jpeg"} alt="Daniel" className="" width={236} height={100}/>
-          <p>I am greatful for this experiece, and this team</p>
+          <p>"I am greatful for this experiece, and this team"</p>
         </div>
         <div className="w-60 border-2 h-fit">
           <h1>Nixon</h1>
@@ -34,7 +34,7 @@ export default function Credits() {
         </div>
         <div className="w-60 border-2 h-fit">
           <h1>Meghan</h1>
-          <Image src={"/Meghan.jpg"} alt="#" className="" width={236} height={100}/>
+          <Image src={"/Meghan.jpg"} alt="Meghan" className="" width={236} height={100}/>
           <p>"I’m thrilled to dive into the React framework for my JavaScript project in Visual Studio! Collaborating with my team using Node and Git to bring our webpage to life!"</p>
         </div>
       </div>
