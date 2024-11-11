@@ -1,11 +1,3 @@
-theme: {
-    extend: {
-      spacing: {
-        '80\%' // p-80% - doesn't work
-      }
-    }
-  }
-
 export default function Frame() {
     return (
         <main className='bg-[url("/frame.png")] bg-contain bg-no-repeat h-[50%] grow pt-[19%]'>
