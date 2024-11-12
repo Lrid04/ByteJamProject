@@ -12,7 +12,7 @@ export default function Remote(props:{setValue: CallableFunction, remoteValue: s
     };
  
     return (
-        <div className="bg-[url('/remote.png')] bg-contain bg-no-repeat flex flex-col items-center p-5 mb-15 text-center pr-[10%]">
+        <div className="bg-[url('/remote.png')] bg-contain bg-no-repeat flex flex-col items-center p-5 mb-15 text-center pr-[10%] mb-[5%]">
             <div className="px-[8%] py-[8%]">
                 <h1 className="text-xl font-bold mt-2 mb-4">Time Travel Remote</h1>
 
